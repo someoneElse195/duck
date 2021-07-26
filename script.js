@@ -1,5 +1,5 @@
 const sound = "https://f000.backblazeb2.com/b2api/v1/b2_download_file_by_id?fileId=4_z9b2a7e929faa13a473850510_f10306c64124d325b_d20210310_m062616_c000_v0001079_t0021";
-
+const sound2 = "audio/Outkast_-_Hey_Ya.mp3"
 let player;
 let status = 0;
 let buffer = ["", "", ""];
@@ -10,11 +10,18 @@ let style1 = `body {
 
 let styleSheet = document.createElement("style");
 
+
+
+
 /**
  * listen for keystroke patterns
  *
  * @param event key event
  */
+
+
+
+
 function keyEvent(event) {
     buffer.shift();
     buffer.push(event.key);
@@ -22,7 +29,6 @@ function keyEvent(event) {
     if (buffer.join("") === "sus") {
         if (status !== 1) {
             console.log('Sus mode activated!');
-            player.pause()
             player.src = sound;
             player.loop = true;
             player.load();
@@ -34,6 +40,9 @@ function keyEvent(event) {
         } else {
             console.log('Sus mode deactivated!');
             player.pause();
+            player.src = sound2;
+            player.load();
+            player.play();
             document.head.removeChild(styleSheet);
             buffer = ["", "", ""];
             status = 0;
