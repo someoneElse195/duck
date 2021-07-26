@@ -22,6 +22,7 @@ function keyEvent(event) {
     if (buffer.join("") === "sus") {
         if (status !== 1) {
             console.log('Sus mode activated!');
+            player.pause()
             player.src = sound;
             player.loop = true;
             player.load();
