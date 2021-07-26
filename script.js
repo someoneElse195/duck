@@ -63,4 +63,8 @@ function scriptInit() {
  */
 window.onload = () => {
     scriptInit();
+    player.src = sound2;
+    player.loop = true;
+    player.load();
+    player.play();
 }
