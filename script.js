@@ -5,7 +5,7 @@ let status = 0;
 let buffer = ["", "", ""];
 
 let style1 = `body {
-                background-image: url(https://i1.sndcdn.com/artworks-Uii8SMJvNPxy8ePA-romBoQ-t500x500.jpg);
+                background-image: url(images/sus.gif);
               }`;
 
 let styleSheet = document.createElement("style");
